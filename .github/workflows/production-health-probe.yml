@@ -44,8 +44,8 @@ name: production-health-probe
 #                          (always runs the gate step; silent on snapshots)
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"
+  # Retired recurring monitor on this saved snapshot (2026-09-20).
+  # Manual and pull-request checks retain their original behavior.
   workflow_dispatch: {}
   pull_request: {}
 
